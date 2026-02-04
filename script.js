@@ -2,17 +2,17 @@ const noBtn = document.getElementById("noBtn");
 const range = document.getElementById("loveRange");
 const percent = document.getElementById("percent");
 
-// Move NO button so it cannot be clicked 😄
-noBtn.addEventListener("touchstart", moveNo);
-noBtn.addEventListener("mouseover", moveNo);
-
+/* Move NO button so it cannot be clicked 😄 */
 function moveNo() {
   const x = Math.random() * 160 - 80;
   const y = Math.random() * 160 - 80;
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
 }
 
-// Update percentage live
+noBtn.addEventListener("mouseover", moveNo);
+noBtn.addEventListener("touchstart", moveNo);
+
+/* Live percentage update */
 range.oninput = () => {
   percent.innerText = range.value;
 };
