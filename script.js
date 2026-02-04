@@ -2,14 +2,17 @@ const noBtn = document.getElementById("noBtn");
 const range = document.getElementById("loveRange");
 const percent = document.getElementById("percent");
 
-// No button escape 😄
-noBtn.addEventListener("mouseover", () => {
-  const x = Math.random() * 200 - 100;
-  const y = Math.random() * 200 - 100;
-  noBtn.style.transform = `translate(${x}px, ${y}px)`;
-});
+// Move NO button so it cannot be clicked 😄
+noBtn.addEventListener("touchstart", moveNo);
+noBtn.addEventListener("mouseover", moveNo);
 
-// Live percentage
+function moveNo() {
+  const x = Math.random() * 160 - 80;
+  const y = Math.random() * 160 - 80;
+  noBtn.style.transform = `translate(${x}px, ${y}px)`;
+}
+
+// Update percentage live
 range.oninput = () => {
   percent.innerText = range.value;
 };
@@ -21,18 +24,19 @@ function goStep2() {
 
 function showResult() {
   const value = range.value;
+
   document.getElementById("step2").classList.add("hidden");
   document.getElementById("result").classList.remove("hidden");
 
   if (value >= 80) {
-    document.getElementById("resultText").innerText = "My Heart is Yours ❤️";
+    document.getElementById("resultText").innerText = "My Heart Is Yours ❤️";
     document.getElementById("resultImg").src = "images/happy.jpg";
     document.getElementById("resultNote").innerText =
-      "This much love makes my life beautiful. I love you forever 💕";
+      "This much love makes my life complete. I love you forever 💕";
   } else {
-    document.getElementById("resultText").innerText = "Hmm… Only this much? 😜";
+    document.getElementById("resultText").innerText = "Only this much? 😜";
     document.getElementById("resultImg").src = "images/funny.jpg";
     document.getElementById("resultNote").innerText =
-      "It’s okay… I’ll love you 100% anyway 😘";
+      "No worries… I’ll love you 100% always 😘";
   }
 }

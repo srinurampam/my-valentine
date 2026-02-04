@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>For My Love ❤️</title>
+
+  <!-- IMPORTANT for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-  <!-- Step 1 -->
+  <!-- STEP 1 -->
   <div id="step1" class="card">
     <h1>Do you love me? ❤️</h1>
-    <img src="images/love.jpg" class="photo">
+    <img src="images/love.jpg" class="photo" alt="Love">
     <div class="buttons">
-      <button onclick="goStep2()">Yes 😍</button>
-      <button id="noBtn">No 🙈</button>
+      <button class="yes-btn" onclick="goStep2()">Yes 😍</button>
+      <button id="noBtn" class="no-btn">No 🙈</button>
     </div>
   </div>
 
-  <!-- Step 2 -->
+  <!-- STEP 2 -->
   <div id="step2" class="card hidden">
     <h1>How much do you love me? 💖</h1>
     <div class="heart">❤️</div>
     <input type="range" min="0" max="100" value="50" id="loveRange">
     <p><span id="percent">50</span>%</p>
-    <button onclick="showResult()">Submit 💌</button>
+    <button class="yes-btn" onclick="showResult()">Submit 💌</button>
   </div>
 
-  <!-- Result -->
+  <!-- RESULT -->
   <div id="result" class="card hidden">
     <h1 id="resultText"></h1>
-    <img id="resultImg" class="photo">
+    <img id="resultImg" class="photo" alt="Result">
     <p id="resultNote"></p>
   </div>
 
