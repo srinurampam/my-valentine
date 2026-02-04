@@ -4,12 +4,9 @@
   <meta charset="UTF-8" />
   <title>For My Love ❤️</title>
 
-  <!-- IMPORTANT for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,9 +26,13 @@
   <!-- STEP 2 -->
   <div id="step2" class="card hidden">
     <h1>How much do you love me? 💖</h1>
-    <div class="heart">❤️</div>
+
+    <!-- HEART IMAGE -->
+    <img src="images/heart.jpg" class="heart-img" alt="Heart">
+
     <input type="range" min="0" max="100" value="50" id="loveRange">
     <p><span id="percent">50</span>%</p>
+
     <button class="yes-btn" onclick="showResult()">Submit 💌</button>
   </div>
 

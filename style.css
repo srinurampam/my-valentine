@@ -43,14 +43,19 @@ h1 {
   object-fit: cover;
   border-radius: 18px;
   margin: 14px 0;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.heart-img {
+  width: 120px;
+  margin: 10px auto 20px;
+  display: block;
+  animation: beat 1s infinite;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
   gap: 16px;
-  flex-wrap: wrap;
 }
 
 button {
@@ -77,12 +82,6 @@ button:hover {
   color: white;
 }
 
-.heart {
-  font-size: 64px;
-  margin: 10px 0;
-  animation: beat 1s infinite;
-}
-
 input[type=range] {
   width: 100%;
   margin-top: 10px;
@@ -92,7 +91,6 @@ input[type=range] {
 p {
   font-size: 22px;
   font-weight: 600;
-  margin: 10px 0;
 }
 
 /* Animations */
@@ -102,28 +100,12 @@ p {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* MOBILE OPTIMIZATION */
 @media (max-width: 480px) {
-  h1 {
-    font-size: 20px;
-  }
-
-  button {
-    font-size: 15px;
-    padding: 10px 22px;
-  }
-
-  .heart {
-    font-size: 56px;
+  .heart-img {
+    width: 100px;
   }
 }
