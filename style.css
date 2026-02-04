@@ -1,0 +1,46 @@
+body {
+  background: linear-gradient(#ffdde1, #ee9ca7);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hidden {
+  display: none;
+}
+
+.photo {
+  width: 100%;
+  border-radius: 15px;
+  margin: 15px 0;
+}
+
+.buttons button, button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4d6d;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.heart {
+  font-size: 60px;
+}
+
+input[type=range] {
+  width: 100%;
+}
