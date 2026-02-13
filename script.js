@@ -32,7 +32,7 @@ if (value >= 80) {
   document.getElementById("resultText").innerText = "My Heart Is Yours ❤️";
   document.getElementById("resultImg").src = "images/happy.jpg";
   document.getElementById("resultNote").innerText =
-    "This much love makes my life complete. I love you forever 💕💖\n\nHappy Valentine's Day 💘🌹";
+    "This much love makes my life complete. I love you forever 💕\n\nHappy Valentine's Day 💘🌹";
 } else {
     document.getElementById("resultText").innerText = "Only this much? 😜";
     document.getElementById("resultImg").src = "images/funny.jpg";
